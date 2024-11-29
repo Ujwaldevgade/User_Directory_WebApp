@@ -36,8 +36,8 @@ Make sure you have the following installed:
    git clone https://github.com/Ujwaldevgade/User_Directory_WebApp.git
  
  2. **Change Directory**
-   ```bash
-   cd User_Directory_WebApp
+    ```bash
+    cd User_Directory_WebApp
 
 
 3. **Install Dependencies**
