@@ -34,6 +34,8 @@ Make sure you have the following installed:
    Open a terminal/command prompt and run:
    ```bash
    git clone https://github.com/Ujwaldevgade/User_Directory_WebApp.git
+ 
+ ```bash
    cd User_Directory_WebApp
 
 
