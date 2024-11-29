@@ -35,15 +35,16 @@ Make sure you have the following installed:
    ```bash
    git clone https://github.com/Ujwaldevgade/User_Directory_WebApp.git
  
- ```bash
+ 2. **Change Directory**
+   ```bash
    cd User_Directory_WebApp
 
 
-2. **Install Dependencies**
+3. **Install Dependencies**
    ```bash
    npm install
 
-3. **Start the Development Server**
+4. **Start the Development Server**
    ```bash
    npm start
 
