@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchUsers } from './redux/userSlice';
+import UserList from './pages/UserList';
+import UserDetail from './pages/UserDetail';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import AddUserForm from './components/AddUserForm';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-100 min-h-screen">
+    <Navbar />
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route path="/user/:id" element={<UserDetail />} />
+        <Route path="/AddUserForm" element={<AddUserForm />} />
+      </Routes>
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
